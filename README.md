@@ -43,3 +43,79 @@
 
 &ensp; SHA-256 e AES-256 são algoritmos criptográficos amplamente utilizados, cada um com um objetivo diferente [(STALLINGS, 2018)](#5-referências). Enquanto SHA-256 é uma função de hash utilizada para garantir a integridade dos dados e verificação de autenticidade, AES-256 é um algoritmo de criptografia simétrica voltado para a proteção de informações sigilosas. Esta análise compara ambos com base em velocidade, segurança e aplicabilidade, utilizando resultados experimentais baseados em testes práticos.
 
+#### 1.2 Comparativo
+
+###### Propósito
+
+ - SHA-256 é uma função de hash projetada para garantir a integridade dos dados, gerando um valor único e irreversível a partir de um input;
+
+- AES-256 é um algoritmo de criptografia simétrica que protege a confidencialidade dos dados, permitindo que informações criptografadas sejam recuperadas com uma chave correta.
+
+##### Irreversibilidade vs. Reversibilidade
+
+- SHA-256 é um processo unidirecional, ou seja, não é possível obter os dados originais a partir do hash gerado [(FERGUSON; SCHNEIER; KOHNO, 2010)](#5-referências).
+
+- AES-256 é reversível, pois os dados podem ser recuperados caso se tenha acesso à chave de descriptografia.
+
+##### Velocidade
+
+&ensp; Com base nos testes realizados utilizando as bibliotecas PyCryptodome e Cryptography, observou-se que SHA-256 apresentou um desempenho superior em termos de velocidade em relação ao AES-256.
+
+&ensp; Isso ocorre porque SHA-256 processa os dados de maneira linear, gerando um hash fixo de 256 bits, enquanto AES-256 executa múltiplas rodadas de encriptação e requer um bloco de inicialização (IV), tornando-o mais pesado computacionalmente.
+
+##### Segurança
+
+&ensp; SHA-256 possui alta resistência a colisões e é amplamente utilizado para validação de integridade e assinaturas digitais [(KATZ; LINDELL, 2020)](#5-referências). No entanto, ele não protege a confidencialidade dos dados, pois não permite recuperá-los.
+
+&ensp; AES-256 é considerado um dos algoritmos de criptografia mais seguros, sendo utilizado para transmissão de informações sensíveis, armazenamento seguro de dados e comunicações protegidas.
+
+#### 2. Uso
+
+- **SHA-256**:
+
+&ensp; Principalmente usado para autenticação, blockchain, verificação de integridade de arquivos e proteção de senhas (hashing).
+
+- **AES-256**:
+
+&ensp; Utilizado em segurança de redes, armazenamento de dados sigilosos, proteção de informações bancárias e criptografia de comunicações.
+
+#### 3. Aplicabilidade
+
+- **SHA-256**:
+<br>
+
+  -  Blockchain;
+
+  -  Certificação digital;
+
+  -  Hashing de senhas;
+
+  -  Controle de integridade de arquivos.
+<br>
+- **AES-256**:
+<br>
+
+  -  Proteção de comunicações seguras;
+
+  -  Armazenamento de informações sensíveis;
+
+  -  Segurança de transações bancárias;
+
+  -  Critografia de arquivos e discos;
+<br>
+
+#### 4. Conclusão
+
+&ensp; Os resultados dos testes realizados confirmam que SHA-256 é mais eficiente em termos de velocidade, pois requer menos processamento. Por outro lado, AES-256 é essencial para a segurança de informações sigilosas devido à sua capacidade de proteção contra acessos não autorizados.
+
+&ensp; A escolha entre SHA-256 e AES-256 depende do objetivo desejado. Para garantir integridade e autenticidade, SHA-256 é mais adequado. Para proteger a confidencialidade dos dados, AES-256 é a escolha ideal. Ambos possuem pontos fortes em suas respectivas funções e são essenciais para a segurança digital.
+
+#### 5. Referências 
+
+- FERGUSON, N.; SCHNEIER, B.; KOHNO, T. Cryptography Engineering: Design Principles and Practical Applications. Wiley Publishing, 2010.
+
+- KATZ, J.; LINDELL, Y. Introduction to Modern Cryptography. 3. ed. CRC Press, 2020.
+
+- SCHNEIER, B. Applied Cryptography: Protocols, Algorithms and Source Code in C. 2. ed. Wiley, 1996.
+
+- STALLINGS, W. Cryptography and Network Security: Principles and Practice. 7. ed. Pearson, 2018.
