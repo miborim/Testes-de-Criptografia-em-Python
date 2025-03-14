@@ -82,7 +82,6 @@
 #### 3. Aplicabilidade
 
 - **SHA-256**:
-<br>
 
   -  Blockchain;
 
@@ -92,8 +91,8 @@
 
   -  Controle de integridade de arquivos.
 <br>
+
 - **AES-256**:
-<br>
 
   -  Proteção de comunicações seguras;
 
