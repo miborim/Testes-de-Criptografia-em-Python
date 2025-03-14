@@ -103,13 +103,16 @@
   -  Critografia de arquivos e discos;
 <br>
 
-#### 4. Conclusão
+#### 4. Explicação do código
+&ensp; Os dois códigos apresentados realizam testes de criptografia e hashing, utilizando os algoritmos AES-256 e SHA-256. O primeiro código implementa a criptografia AES-256, que é um método de criptografia simétrica utilizado para proteger dados sensíveis. Ele emprega a biblioteca PyCryptodome e a Cryptography para criptografar e descriptografar uma lista de frases, garantindo que os dados possam ser recuperados apenas com a chave correta. O segundo código implementa a função de hash SHA-256, que é um algoritmo de hash criptográfico usado para gerar resumos únicos e irreversíveis de dados. Ele utiliza as bibliotecas hashlib e PyCryptodome para transformar cada frase de teste em um hash de 256 bits, permitindo verificações de integridade e autenticação sem a possibilidade de reversão ao valor original. Enquanto o AES-256 foca na proteção de informações confidenciais garantindo confidencialidade, o SHA-256 é utilizado para garantir a integridade dos dados, tornando-se essencial para segurança digital e aplicações como *blockchain* e autenticação de dados.
+
+#### 5. Conclusão
 
 &ensp; Os resultados dos testes realizados confirmam que SHA-256 é mais eficiente em termos de velocidade, pois requer menos processamento. Por outro lado, AES-256 é essencial para a segurança de informações sigilosas devido à sua capacidade de proteção contra acessos não autorizados.
 
 &ensp; A escolha entre SHA-256 e AES-256 depende do objetivo desejado. Para garantir integridade e autenticidade, SHA-256 é mais adequado. Para proteger a confidencialidade dos dados, AES-256 é a escolha ideal. Ambos possuem pontos fortes em suas respectivas funções e são essenciais para a segurança digital.
 
-#### 5. Referências 
+#### 6. Referências 
 
 - FERGUSON, N.; SCHNEIER, B.; KOHNO, T. Cryptography Engineering: Design Principles and Practical Applications. Wiley Publishing, 2010.
 
